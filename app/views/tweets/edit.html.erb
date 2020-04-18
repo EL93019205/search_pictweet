@@ -1,0 +1,8 @@
+<div class="contents row">
+  <%= form_with(model: @tweet, local: true) do |form| %>
+    <h3>
+      編集する
+    </h3>
+    <%= render partial: "form", locals: { form: form } %>
+  <% end %>
+</div>
