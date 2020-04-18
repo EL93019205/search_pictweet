@@ -4,6 +4,14 @@ $(function(){
   function appendTweet(tweet){
     var current_user = "";
 
+    if( tweet.user_sign_in && tweet.user_sign_in.id == tweet.user_id ){
+      current_user = `<li>
+                        <a href="/tweets/${tweet.id}/edit" data-method="get" >編集</a>
+                      </li>
+                      <li>
+                        <a href="/tweets/${tweet.id}" data-method="delete" >削除</a>
+                      </li>`;
+    }
 
     var html = `<div class="content_post" style="background-image: url(${tweet.image});">
                   <div class="more">
