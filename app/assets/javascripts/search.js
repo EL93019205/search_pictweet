@@ -58,5 +58,8 @@ $(function(){
         appendErrMsgToHTML("一致するツイートがありません");
       }
     })
+    .fail(function(){
+      alert('error');
+    });
   });
 });
