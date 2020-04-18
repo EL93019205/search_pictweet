@@ -10,6 +10,10 @@ $(function(){
     })
     .done(function(tweets){
       search_list.empty();
+      if(tweets.length !== 0){
+      }
+      else{
+      }
     })
   });
 });
