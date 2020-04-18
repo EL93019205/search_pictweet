@@ -1,4 +1,5 @@
 $(function(){
+  var search_list = $(".contents.row");
   $(".search-input").on("keyup", function(){
     var input = $(".search-input").val();
     $.ajax({
@@ -8,7 +9,7 @@ $(function(){
       dataType: 'json'
     })
     .done(function(tweets){
-      $(".contents.row").empty();
+      search_list.empty();
     })
   });
 });
