@@ -8,6 +8,7 @@ $(function(){
       dataType: 'json'
     })
     .done(function(tweets){
+      $(".contents.row").empty();
     })
   });
 });
