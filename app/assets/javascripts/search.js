@@ -33,6 +33,12 @@ $(function(){
 
     search_list.append(html);
   }
+
+  function appendErrMsgToHTML(msg){
+    var html = `<div class='name'>${ msg }</div>`
+    search_list.append(html);
+  }
+
   $(".search-input").on("keyup", function(){
     var input = $(".search-input").val();
     $.ajax({
@@ -49,6 +55,7 @@ $(function(){
         });
       }
       else{
+        appendErrMsgToHTML("一致するツイートがありません");
       }
     })
   });
